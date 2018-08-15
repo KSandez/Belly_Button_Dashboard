@@ -3,8 +3,8 @@
  * */
 function buildGauge(wfreq) {
 
-  d3.json(`/wfreq/${sample}`).then((sampleData) => {
-    const wfreq = sampleData.wfreq
+  // d3.json(`/wfreq/${sample}`).then((sampleData) => {
+    // const wfreq = sampleData.wfreq
     
     // Enter the washing frequency between 0 and 180
     var level = parseFloat(wfreq) * 20;
@@ -93,5 +93,5 @@ function buildGauge(wfreq) {
   
   let GAUGE = document.getElementById("gauge");
   Plotly.newPlot(GAUGE, gaugeData, gaugeLayout);
-})
+// })
 }

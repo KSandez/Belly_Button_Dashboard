@@ -8,6 +8,9 @@ function buildMetadata(sample) {
     // Use `.html("") to clear any existing metadata
     d3.json(`/metadata/${sample}`).then((sampleData) => {
       console.log(sampleData);
+
+      buildGauge(sampleData.WFREQ);
+  
       var panel = d3.select("#sample-metadata")
 
       panel.html("");
@@ -28,8 +31,7 @@ function buildCharts(sample) {
   // @TODO: Use `d3.json` to fetch the sample data for the plots
 
      // BONUS: Build the Gauge Chart
-    // buildGauge(data.WFREQ);
-  
+    
  
   // @TODO: Build a Bubble Chart using the sample data
 
